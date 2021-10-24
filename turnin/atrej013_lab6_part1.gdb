@@ -69,13 +69,6 @@ timeContinue
 expect PORTB 0x04
 checkResult
 
-test "A0 = Pause"
-setPINA ~0x01
-timeContinue
-expect state Pause
-expect PORTB 0x04
-checkResult
-
 # Report on how many tests passed/tests ran
 set $passed=$tests-$failed
 eval "shell echo Passed %d/%d tests.\n",$passed,$tests
